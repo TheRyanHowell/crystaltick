@@ -1,0 +1,21 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "script"
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "no-unused-vars": ["error", { "args": "none" }]
+  },
+  "globals": {
+    "Pebble": "readonly",
+    "XMLHttpRequest": "readonly",
+    "navigator": "readonly",
+    "localStorage": "readonly"
+  }
+}

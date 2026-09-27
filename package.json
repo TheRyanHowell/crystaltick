@@ -1,0 +1,73 @@
+{
+  "name": "crystaltick",
+  "author": "Ryan Howell",
+  "version": "1.0.0",
+  "license": "AGPL-3.0-only",
+  "keywords": ["pebble-app"],
+  "private": true,
+  "scripts": {
+    "build": "pebble build",
+    "test": "./scripts/run_tests.sh",
+    "coverage": "./scripts/coverage.sh",
+    "coverage:html": "./scripts/coverage_html.sh",
+    "lint:c-format": "clang-format --dry-run -Werror src/c/*.c src/c/*.h",
+    "lint:c-analyze": "./scripts/cppcheck.sh",
+    "lint:js": "eslint src/pkjs",
+    "lint": "npm run lint:c-format && npm run lint:c-analyze && npm run lint:js",
+    "format": "clang-format -i src/c/*.c src/c/*.h"
+  },
+  "dependencies": {
+    "@rebble/clay": "^1.0.8"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  },
+  "pebble": {
+    "displayName": "CrystalTick",
+    "uuid": "c5b05116-7cb3-42a4-9cc8-c2d3ee04e386",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": ["emery"],
+    "watchapp": {
+      "watchface": true
+    },
+    "capabilities": ["configurable", "health"],
+    "messageKeys": [
+      "CentralFaceColor",
+      "BacklightColor",
+      "FirstRowComplication",
+      "TemperatureUnit",
+      "SecondsDisplay",
+      "DateFormatDDMM",
+      "FirstDayIsMonday",
+      "NightInvertEnabled",
+      "NightStartHour",
+      "NightEndHour",
+      "AntiBurnInShift",
+      "TEMPERATURE",
+      "REQUEST_WEATHER"
+    ],
+    "resources": {
+      "media": [
+        {
+          "type": "font",
+          "name": "FONT_TIME_52",
+          "file": "fonts/DSEG7ClassicMini-Bold.ttf",
+          "characterRegex": "[0-9:]"
+        },
+        {
+          "type": "font",
+          "name": "FONT_SMALL_22",
+          "file": "fonts/DSEG7ClassicMini-Bold.ttf",
+          "characterRegex": "[0-9CF-]"
+        },
+        {
+          "type": "bitmap",
+          "name": "MENU_ICON",
+          "file": "images/menu_icon.png",
+          "menuIcon": true
+        }
+      ]
+    }
+  }
+}

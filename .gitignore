@@ -1,0 +1,17 @@
+build/
+node_modules/
+
+# waf build-lock file - contains a full dump of the local environment
+# (hostname, username, absolute paths), never meant to leave the machine
+# that ran `pebble build`.
+.lock-waf_*
+
+# Emulator/device screenshots and log captures from dev iteration - useful
+# in the moment, not meant to be committed.
+screenshot_*.png
+phone_*.png
+*_zoom*.png
+pebble-logs*.txt
+phone-logs*.txt
+.pebble-logs.pid
+.phone-logs.pid

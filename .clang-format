@@ -1,0 +1,18 @@
+---
+# Matches PebbleOS's own .clang-format so this code reads consistently with
+# the SDK/firmware it targets.
+BasedOnStyle: Google
+ColumnLimit: 100
+PointerAlignment: Right
+SortIncludes: Never
+AllowAllArgumentsOnNextLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+BreakAfterOpenBracketBracedList: true
+BreakBeforeCloseBracketBracedList: true
+AlignConsecutiveMacros: Consecutive
+BreakStringLiterals: false
+BracedInitializerIndentWidth: 2
+SpacesBeforeTrailingComments: 1
