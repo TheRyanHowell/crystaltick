@@ -10,6 +10,11 @@ See [`docs/design.md`](docs/design.md) for the full design rationale — the col
 heart-rate complication's HealthService integration, the screen-care features, and a list of
 Pebble API gotchas worth knowing before touching the layout code.
 
+## Install
+
+- [Rebble appstore](https://apps.rebble.io/en_US/application/6ab8c66d3a48fe000ac8af5b)
+- [Core Devices appstore](https://apps.repebble.com/f319e01edc884349b8da93a4)
+
 ## Screenshots
 
 | Steps | Temperature | Night |
